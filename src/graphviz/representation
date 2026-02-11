@@ -1,0 +1,97 @@
+digraph EsportsOntology {
+    rankdir=LR;
+    bgcolor="white";
+    node [style=filled, fontname="Helvetica"];
+
+    /* ===== KINDS ===== */
+    Person1 [label="Person\nAlice Silva", fillcolor="#ffcccc"];
+    Person2 [label="Person\nBruno Costa", fillcolor="#ffcccc"];
+    Person3 [label="Person\nCarlos Lima", fillcolor="#ffcccc"];
+
+    TeamA [label="Team\nRed Dragons\nRegion: BR", fillcolor="#ffcccc"];
+    TeamB [label="Team\nBlue Phoenix\nRegion: BR", fillcolor="#ffcccc"];
+
+    Game1 [label="Game\nLeague of Legends", fillcolor="#ffcccc"];
+    Platform1 [label="Platform\nPC", fillcolor="#ffcccc"];
+
+    Tournament1 [label="Tournament\nSpring Split", fillcolor="#ffcccc"];
+    Season2025 [label="Season\n2025", fillcolor="#ffcccc"];
+
+    /* ===== STAGES (SUBKINDS) ===== */
+    StageGroup [label="GroupStage", fillcolor="#ffcc99"];
+    StagePlayoffs [label="PlayOffs", fillcolor="#ffcc99"];
+
+    /* ===== MATCHES ===== */
+    Match1 [label="Match\nM1\nWinner: Red Dragons", fillcolor="#ffffcc"];
+    Match2 [label="Match\nM2\nWinner: Blue Phoenix", fillcolor="#ffffcc"];
+
+    /* ===== ROLES ===== */
+    Player1 [label="Player\nnickname: AliceGG", fillcolor="#ffb6c1"];
+    Player2 [label="Player\nnickname: BrunoX", fillcolor="#ffb6c1"];
+
+    Coach1 [label="Coach\nCarlos Lima", fillcolor="#ffb6c1"];
+
+    ActiveTeamA [label="ActiveTeam\nRed Dragons", fillcolor="#ffb6c1"];
+    ActiveTeamB [label="ActiveTeam\nBlue Phoenix", fillcolor="#ffb6c1"];
+
+    /* ===== PHASES ===== */
+    ActivePlayer1 [label="ActivePlayer", fillcolor="#f4a582"];
+    SuspendedPlayer2 [label="SuspendedPlayer", fillcolor="#f4a582"];
+
+    /* ===== RELATORS ===== */
+    PlayerContract1 [label="PlayerContract\nsalary: 5000", fillcolor="#ccffcc"];
+    StaffContract1 [label="StaffContract\nsalary: 8000", fillcolor="#ccffcc"];
+
+    PlayerParticipation1 [label="PlayerParticipation\nscore: 10", fillcolor="#fff2a8"];
+    PlayerParticipation2 [label="PlayerParticipation\nscore: 3", fillcolor="#fff2a8"];
+
+    TeamParticipation1 [label="TeamParticipation\nscore: 1", fillcolor="#fff2a8"];
+    TeamParticipation2 [label="TeamParticipation\nscore: 0", fillcolor="#fff2a8"];
+
+    PlayerPenalty1 [label="PlayerPenalty\nreason: Toxicity", fillcolor="#ccffcc"];
+    Placement1 [label="Placement\nposition: 1", fillcolor="#ccffcc"];
+
+    /* ===== RELATIONS ===== */
+
+    /* Roles */
+    Person1 -> Player1 [label="assumes"];
+    Person2 -> Player2 [label="assumes"];
+    Person3 -> Coach1 [label="assumes"];
+
+    /* Phases */
+    Player1 -> ActivePlayer1 [label="inPhase"];
+    Player2 -> SuspendedPlayer2 [label="inPhase"];
+
+    /* Contracts */
+    Player1 -> PlayerContract1 -> TeamA;
+    Coach1 -> StaffContract1 -> TeamA;
+
+    /* Participation */
+    Player1 -> PlayerParticipation1 -> Match1;
+    Player2 -> PlayerParticipation2 -> Match1;
+
+    TeamA -> TeamParticipation1 -> Match1;
+    TeamB -> TeamParticipation2 -> Match1;
+
+    /* Penalty */
+    Player2 -> PlayerPenalty1;
+
+    /* Structure */
+    Match1 -> Game1 [label="isOf"];
+    Game1 -> Platform1 [label="availableOn"];
+
+    Match1 -> StageGroup;
+    Match2 -> StagePlayoffs;
+
+    StageGroup -> Tournament1;
+    StagePlayoffs -> Tournament1;
+
+    Tournament1 -> Season2025;
+
+    /* Placement */
+    TeamA -> Placement1 -> StageGroup;
+
+    /* Active Teams */
+    TeamA -> ActiveTeamA;
+    TeamB -> ActiveTeamB;
+}
