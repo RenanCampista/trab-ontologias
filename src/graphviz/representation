@@ -5,68 +5,88 @@ digraph EsportsOntology {
     node [style=filled, fontname="Helvetica"];
 
     /* ===================== KINDS ===================== */
-    Person1 [label="Person\nAlice Silva", fillcolor="#ffcccc"];
-    Person2 [label="Person\nBruno Costa", fillcolor="#ffcccc"];
-    Person3 [label="Person\nCarlos Lima", fillcolor="#ffcccc"];
+    Person1 [label="Person\nEneas Tomas Protti", fillcolor="#f48fb1"];
+    Person2 [label="Person\nJeong Jo-bin", fillcolor="#f48fb1"];
+    Person3 [label="Person\nRenato Guilherme", fillcolor="#f48fb1"];
+    Person4 [label="Person\nGabriel Emanuel Arias", fillcolor="#f48fb1"];
+    Person5 [label="Person\nVictor Venancio", fillcolor="#f48fb1"];
+    Person6 [label="Person\nThiago Augusto", fillcolor="#f48fb1"];
+    Person7 [label="Person\nTácio Schaeppi", fillcolor="#f48fb1"];
 
-    TeamA [label="Team\nRed Dragons\nRegion: BR", fillcolor="#ffcccc"];
-    TeamB [label="Team\nBlue Phoenix\nRegion: BR", fillcolor="#ffcccc"];
+    TeamA [label="Team\nLeviatan\nRegion: BR", fillcolor="#f48fb1"];
+    TeamB [label="Team\nVivo Keyd Stars\nRegion: BR", fillcolor="#f48fb1"];
 
-    Game1 [label="Game\nLeague of Legends", fillcolor="#ffcccc"];
-    Platform1 [label="Platform\nPC", fillcolor="#ffcccc"];
+    Game1 [label="Game\nLeague of Legends", fillcolor="#f48fb1"];
+    Platform1 [label="Platform\nPC", fillcolor="#f48fb1"];
 
-    Tournament1 [label="Tournament\nSpring Split", fillcolor="#ffcccc"];
-    TournamentStaff1 [label="TournamentStaff\nOrganizer", fillcolor="#ffcccc"];
+    Tournament1 [label="Tournament\nCBLOL", fillcolor="#f48fb1"];
+    TournamentStaff1 [label="TournamentStaff\nOrganizer", fillcolor="#f48fb1"];
 
     /* ===================== EVENTS ===================== */
-    Season2025 [label="Season\n2025", fillcolor="#ffffcc"];
+    Season2025 [label="Season\n2025 Cup", fillcolor="#ffffcc"];
 
-    StageGroup [label="GroupStage", fillcolor="#ffe0b2"];
-    StagePlayoffs [label="PlayOffs", fillcolor="#ffe0b2"];
+    StagePlayoffs [label="Playoffs", fillcolor="#ffffcc"];
 
-    Match1 [label="Match\nM1\nWinner: Red Dragons", fillcolor="#fff9c4"];
-    Match2 [label="Match\nM2\nWinner: Blue Phoenix", fillcolor="#fff9c4"];
+    Match1 [label="Match\nM1\nwinner: Leviatan\nmatchDate: 14/02/2025\nmatchType: Bo5", fillcolor="#ffffcc"];
 
     /* ===================== ROLES ===================== */
-    Player1 [label="Player\nnick: AliceGG", fillcolor="#f8bbd0"];
-    Player2 [label="Player\nnick: BrunoX", fillcolor="#f8bbd0"];
+    Player1 [label="Player\nnick: Enga", fillcolor="#ffcccc"];
+    Player2 [label="Player\nnick: Mireu", fillcolor="#ffcccc"];
+    Player3 [label="Player\nnick: Qats", fillcolor="#ffcccc"];
 
-    ActivePlayer1 [label="ActivePlayer", fillcolor="#f48fb1"];
-    SuspendedPlayer2 [label="SuspendedPlayer", fillcolor="#f48fb1"];
+    ActivePlayer1 [label="ActivePlayer", fillcolor="#ffcccc"];
+    SuspendedPlayer2 [label="SuspendedPlayer\npenaltyDate: 13/02/2025", fillcolor="#ffcccc"];
+    ActivePlayer3 [label="ActivePlayer", fillcolor="#ffcccc"];
 
-    TeamStaff1 [label="TeamStaffMember\nCarlos", fillcolor="#f8bbd0"];
-    Coach1 [label="Coach", fillcolor="#f8bbd0"];
-    Analyst1 [label="Analyst", fillcolor="#f8bbd0"];
+    TeamStaff1 [label="TeamStaffMember\nKaiba", fillcolor="#ffcccc"];
+    TeamStaff2 [label="TeamStaffMember\nNewCosmo", fillcolor="#ffcccc"];
+    TeamStaff3 [label="TeamStaffMember\nSrVenancio", fillcolor="#ffcccc"];
+    Coach1 [label="Coach", fillcolor="#ffcccc"];
+    Coach2 [label="AssistantCoach", fillcolor="#ffcccc"];
+    Analyst1 [label="Analyst", fillcolor="#ffcccc"];
 
-    ActiveTeamA [label="ActiveTeam", fillcolor="#f8bbd0"];
-    ActiveTeamB [label="ActiveTeam", fillcolor="#f8bbd0"];
+    ActiveTeamA [label="ActiveTeam", fillcolor="#ffcccc"];
+    ActiveTeamB [label="ActiveTeam", fillcolor="#ffcccc"];
+    
+    Caster1 [label="Caster\nSchaeppi", fillcolor="#ffcccc"];
 
     /* ===================== RELATORS ===================== */
     PlayerContract1 [label="PlayerContract\nsalary: 5000", fillcolor="#c8e6c9"];
-    StaffContract1 [label="StaffMemberContract\nsalary: 8000", fillcolor="#c8e6c9"];
+    PlayerContract2 [label="PlayerContract\nsalary: 5000", fillcolor="#c8e6c9"];
+    PlayerContract3 [label="PlayerContract\nsalary: 3000", fillcolor="#c8e6c9"];
+    StaffContract1 [label="StaffMemberContract\nsalary: 6000", fillcolor="#c8e6c9"];
+    StaffContract2 [label="StaffMemberContract\nsalary: 4000", fillcolor="#c8e6c9"];
+    StaffContract3 [label="StaffMemberContract\nsalary: 4000", fillcolor="#c8e6c9"];
 
-    PlayerParticipation1 [label="PlayerParticipation\nscore: 10\ntime: 35", fillcolor="#fff2a8"];
-    PlayerParticipation2 [label="PlayerParticipation\nscore: 3\ntime: 20", fillcolor="#fff2a8"];
+    PlayerParticipation1 [label="PlayerParticipation\nscore: 6,83\ntime: 143\nteam: Leviatan", fillcolor="#ffffcc"];
+    PlayerParticipation2 [label="PlayerParticipation\nscore: 1,78\ntime: 143\nteam: Vivo Keyd Stars", fillcolor="#ffffcc"];
 
-    TeamParticipation1 [label="TeamParticipation\nscore: 1", fillcolor="#fff2a8"];
-    TeamParticipation2 [label="TeamParticipation\nscore: 0", fillcolor="#fff2a8"];
+    TeamParticipation1 [label="TeamParticipation\nscore: 3", fillcolor="#ffffcc"];
+    TeamParticipation2 [label="TeamParticipation\nscore: 1", fillcolor="#ffffcc"];
 
     PlayerPenalty1 [label="PlayerPenalty\nreason: Toxicity", fillcolor="#c8e6c9"];
-    TeamPenalty1 [label="TeamPenalty\nreason: Late arrival", fillcolor="#c8e6c9"];
 
-    TeamStagePart1 [label="TeamStageParticipation\nposition: 1\npoints: 9", fillcolor="#fff2a8"];
+    TeamStagePart1 [label="TeamStageParticipation\nposition: 5\npoints: 1", fillcolor="#ffffcc"];
+    TeamStagePart2 [label="TeamStageParticipation\nposition: 6\npoints: 0", fillcolor="#ffffcc"];
 
     /* ===================== ROLE ASSIGNMENT ===================== */
     Person1 -> Player1 [label="assumes"];
     Person2 -> Player2 [label="assumes"];
+    Person6 -> Player3 [label="assumes"];
     Person3 -> TeamStaff1 [label="assumes"];
+    Person4 -> TeamStaff2 [label="assumes"];
+    Person5 -> TeamStaff3 [label="assumes"];
+    Person7 -> Caster1 [label="assumes"];
 
     TeamStaff1 -> Coach1 [label="specializes"];
-    TeamStaff1 -> Analyst1 [label="specializes"];
+    
+    TeamStaff2 -> Coach2 [label="specializes"];
 
+    TeamStaff3 -> Analyst1 [label="specializes"];
     /* ===================== PHASES ===================== */
     Player1 -> ActivePlayer1 [label="inPhase"];
     Player2 -> SuspendedPlayer2 [label="inPhase"];
+    Player3 -> ActivePlayer3 [lavel="inPhase"];
 
     /* ===================== CONTRACTS ===================== */
     Player1 -> PlayerContract1;
@@ -74,12 +94,24 @@ digraph EsportsOntology {
 
     TeamStaff1 -> StaffContract1;
     StaffContract1 -> TeamA;
+    
+    TeamStaff2 -> StaffContract2;
+    StaffContract2 -> TeamA;
+    
+    TeamStaff3 -> StaffContract3;
+    StaffContract3 -> TeamA;
+    
+    Player2 -> PlayerContract2;
+    PlayerContract2 -> TeamB;
+    
+    Player3 -> PlayerContract3;
+    PlayerContract3 -> TeamB;
 
     /* ===================== PARTICIPATION ===================== */
     Player1 -> PlayerParticipation1;
     PlayerParticipation1 -> Match1;
 
-    Player2 -> PlayerParticipation2;
+    Player3 -> PlayerParticipation2;
     PlayerParticipation2 -> Match1;
 
     TeamA -> TeamParticipation1;
@@ -87,27 +119,28 @@ digraph EsportsOntology {
 
     TeamB -> TeamParticipation2;
     TeamParticipation2 -> Match1;
+    
+    Caster1 -> Match1;
 
     /* ===================== PENALTIES ===================== */
-    Player2 -> PlayerPenalty1;
-    TeamA -> TeamPenalty1;
-    TournamentStaff1 -> TeamPenalty1;
+    TournamentStaff1 -> PlayerPenalty1;
+    PlayerPenalty1 -> Player2;
 
     /* ===================== STRUCTURE ===================== */
     Match1 -> Game1 [label="isOf"];
     Game1 -> Platform1 [label="playedOn"];
 
-    Match1 -> StageGroup;
-    Match2 -> StagePlayoffs;
+    Match1 -> StagePlayoffs;
 
-    StageGroup -> Tournament1;
-    StagePlayoffs -> Tournament1;
+    StagePlayoffs -> Season2025;
 
-    Tournament1 -> Season2025;
+    Season2025 -> Tournament1;
 
     /* ===================== STAGE RANKING ===================== */
     TeamA -> TeamStagePart1;
-    TeamStagePart1 -> StageGroup;
+    TeamB -> TeamStagePart2;
+    TeamStagePart1 -> StagePlayoffs;
+    TeamStagePart2 -> StagePlayoffs;
 
     /* ===================== TEAM STATES ===================== */
     TeamA -> ActiveTeamA;
