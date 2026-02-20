@@ -84,9 +84,9 @@ digraph EsportsOntology {
 
     TeamStaff3 -> Analyst1 [label="specializes"];
     /* ===================== PHASES ===================== */
-    Player1 -> ActivePlayer1 [label="inPhase"];
-    Player2 -> SuspendedPlayer2 [label="inPhase"];
-    Player3 -> ActivePlayer3 [lavel="inPhase"];
+    Player1 -> ActivePlayer1 [label="inRole"];
+    Player2 -> SuspendedPlayer2 [label="inPRole"];
+    Player3 -> ActivePlayer3 [label="inRole"];
 
     /* ===================== CONTRACTS ===================== */
     Player1 -> PlayerContract1;
